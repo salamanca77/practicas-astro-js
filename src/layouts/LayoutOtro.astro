@@ -1,0 +1,27 @@
+ ---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+console.log(frontmatter);
+---
+
+<Layout title="Otro">
+	<section>
+		<header>
+			<h1>
+			{frontmatter.title  }	
+			</h1>
+			<p>{frontmatter.description}</p>
+		</header>
+		<article>
+			<div>
+				<slot />
+			</div>
+		</article>
+		</section>
+</Layout>
+
+<style>
+	section{
+		padding-top: 50px;
+	}
+</style>

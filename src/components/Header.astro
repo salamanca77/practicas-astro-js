@@ -1,0 +1,52 @@
+---
+import MenuContainer from '../components/MenuContainer.astro';
+import MenuItem from '../components/MenuItem.astro';
+import {menu_valores} from '../datos/menu_valores';
+
+---
+<nav>
+    <div class="logo"><p>Logo</p></div>
+    <MenuContainer>
+        {
+            menu_valores.map((valor) =>(
+                <MenuItem {...valor}/>
+            ))
+        }
+    </MenuContainer>
+</nav>
+<style>
+    nav{
+        position: fixed;
+        display: flex;
+        z-index: 100;
+        width: 100%;
+        height: 50px;
+        justify-content: space-around;
+        align-items: center;
+        background-color: gray;
+        
+    }
+
+    nav div{
+        position: absolute;
+        width: 70%;
+        height: 100%;
+        color:white;
+        /* background-color: brown; */
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

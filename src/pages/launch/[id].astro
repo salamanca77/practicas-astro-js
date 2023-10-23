@@ -1,0 +1,59 @@
+---
+import { idconeccion } from "../../servicios/apiconeccion";
+import { apiconeccion } from "../../servicios/apiconeccion";
+import Layout from "../../layouts/Layout.astro";
+
+const { id } = Astro.params;
+console.log({ id });
+let item;
+
+if (id) {
+    item = await idconeccion({ id });
+}
+console.log(item);
+
+// export async function getStaticPaths() {
+//     const itemes = await apiconeccion();
+//     return itemes.map((item) => ({
+//         params: { id: item.id },
+//     }));
+// }
+---
+
+<Layout title="pruebas">
+    <section>
+        <img src={item.image} alt="">
+        <h2>
+            Especie:
+            {item.species}
+            <p> fecha de creacion: {item.created}</p>
+        </h2>
+    </section>
+</Layout>
+
+<style>
+    section {
+        height: 100vh;
+        padding-top: 50px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+
+    section img{
+        width:300px ;
+        height: 400px;
+        object-fit: cover;
+        background-color: aqua;
+        margin-right:15px;
+    }
+</style>
+
+
+
+
+
+

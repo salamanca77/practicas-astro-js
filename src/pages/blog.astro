@@ -1,0 +1,32 @@
+---
+import PostVista from "../components/PostVista.astro";
+import Layout from "../layouts/Layout.astro";
+const posts = await Astro.glob('./posts/*.md')
+console.log(posts);
+
+---
+
+<Layout title="Blog">
+    <section>
+         <article>
+            {
+                posts.map((post)=>(
+                    <PostVista  posts={post}/>
+                ))
+            }
+         </article>
+    </section>
+</Layout>
+
+<style>
+    section{
+        padding-top:50px ;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    article{
+        width: 400px;
+    }
+</style>

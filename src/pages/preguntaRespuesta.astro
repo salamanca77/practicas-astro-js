@@ -1,0 +1,25 @@
+---
+import RespuestaItem from "../components/RespuestaItem.astro";
+import { pR } from "../datos/pR";
+import Layout from "../layouts/Layout.astro";
+console.log(pR);
+---
+<Layout title="Preguntas">
+    <section>
+        <article>
+            {
+                pR.map((dato) => {
+                    return <RespuestaItem datos={dato} />;
+                })
+            }
+        </article>
+    </section>
+
+</Layout>
+
+<style>
+    section{
+        padding-top: 50px ;
+    }
+</style>
+ 

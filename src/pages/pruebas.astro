@@ -1,0 +1,50 @@
+---
+import { apiconeccion } from "../servicios/apiconeccion";
+import Layout from "../layouts/Layout.astro";
+import Personajes from "../components/Personajes.astro";
+const datos = await apiconeccion();
+console.log(datos);
+---
+
+<Layout title="Pagina de prueba">
+    <section>
+        <article>
+            <!-- <div> -->
+                {
+                    datos.map(({ name, image, id }) => (
+                        <Personajes name={name} image={image} id={id} />
+                        // <Personajes dibujo={dibujo}/>
+                    ))
+                }
+            <!-- </div> -->
+        </article>
+    </section>
+</Layout>
+
+<style>
+    section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    article {
+        width: 600px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,200px);
+        padding-top: 50px;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+

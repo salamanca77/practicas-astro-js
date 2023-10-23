@@ -1,0 +1,76 @@
+---
+ interface Props {
+    id:       number;
+    name:     string;
+    species: string;
+    type:     string;
+    origin:   Location;
+    location: Location;
+    image:    string;
+    episode:  string[];
+    url:      string;
+    created:  Date;
+}
+
+// const {dibujo} = Astro.props
+// const {name, image} = dibujo
+    const {name, image, id,} = Astro.props    
+---
+
+<div>
+    <a href={`/launch/${id}`}>
+        <img src={image} alt="">
+        <p>{name}</p>
+    </a>
+</div>
+
+<style>
+  
+  div{
+    width: 100%;
+    box-sizing: border-box;    
+    background-color: black;
+    border: solid 5px white;
+
+  }
+  
+  div a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+  }
+  
+  div a img{
+        display: flex;
+        width: 100%;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
