@@ -10,11 +10,11 @@ export const menu_valores:menu_tipo_valores[] = [
     url:'/fag'
  },
  {
-    title:'Blog',
+    title:'Markdawon',
     url:'/blog'
  },
  {
-    title:'Prueba',
+    title:'Dibujos',
     url:'/pruebas'
  },
  {
