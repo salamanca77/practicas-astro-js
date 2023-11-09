@@ -1,0 +1,10 @@
+---
+const {id, image} = Astro.props;
+---
+
+<div>
+    <a href={`/detallePoke/${id}`}>
+        <p>{id}</p>
+        <img src={image} alt="" />
+    </a>
+</div>

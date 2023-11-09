@@ -1,22 +1,23 @@
 ---
+import {type APIResult}  from '../tiposDatos/api'
+
 import { apiconeccion } from "../servicios/apiconeccion";
 import Layout from "../layouts/Layout.astro";
 import Personajes from "../components/Personajes.astro";
-const datos = await apiconeccion();
+const datos = await apiconeccion() as APIResult;
 console.log(datos);
+
 ---
 
 <Layout title="Pagina de prueba">
     <section>
         <article>
-            <!-- <div> -->
                 {
                     datos.map(({ name, image, id }) => (
                         <Personajes name={name} image={image} id={id} />
                         // <Personajes dibujo={dibujo}/>
                     ))
                 }
-            <!-- </div> -->
         </article>
     </section>
 </Layout>
@@ -35,7 +36,6 @@ console.log(datos);
         padding-top: 50px;
     }
 </style>
-
 
 
 

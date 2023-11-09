@@ -6,23 +6,27 @@ export const menu_valores:menu_tipo_valores[] = [
     url:'/'
  },
  {
-    title:'FAQ',
-    url:'/fag'
+    title:'Movies',
+    url:'/movies'
  },
  {
     title:'Markdawon',
-    url:'/blog'
+    url:'/markdawon'
  },
  {
     title:'Dibujos',
-    url:'/pruebas'
+    url:'/dibujos'
  },
  {
    title:'Preguntas',
    url:'/preguntaRespuesta'
 },   
  {
-   title:'blog5',
+   title:'Nosotros',
    url:'/nosotros'
+},  
+ {
+   title:'Pruebas',
+   url:'/prueba'
 },   
 ]

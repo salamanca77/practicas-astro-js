@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import { apiPokemon } from "../servicios/apiconeccion";
+// const datos  = await apiPokemon()
+// console.log(datos);
+const resultado = await fetch('https://pokeapi.co/api/v2/pokemon')
+const d = await resultado.json()
+    // const {results} = (await resultado.json()) as APIResult
+    console.log(d);
+
+---
+
+<Layout title="Fag">
+    <section><h1>Movies</h1></section>
+</Layout>
+
+<style>
+    section{
+        padding-top:50px ;
+        text-align: center;
+    }
+</style>
+
