@@ -1,0 +1,11 @@
+---
+const datos = Astro.props
+console.log(datos);
+
+const {frontmatter} = Astro.props
+console.log(frontmatter);
+
+---
+<h1>mark uno</h1>
+<slot />
+{frontmatter.titulo}

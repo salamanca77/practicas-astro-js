@@ -7,26 +7,26 @@ export const menu_valores:menu_tipo_valores[] = [
  },
  {
     title:'Movies',
-    url:'/movies'
+    url:'#movies'
  },
  {
     title:'Markdawon',
-    url:'/markdawon'
+    url:'#markdawon'
  },
  {
     title:'Dibujos',
-    url:'/dibujos'
+    url:'#dibujos'
  },
  {
    title:'Preguntas',
-   url:'/preguntaRespuesta'
+   url:'#preguntaRespuesta'
 },   
  {
    title:'Nosotros',
-   url:'/nosotros'
+   url:'#nosotros'
 },  
  {
-   title:'Pruebas',
-   url:'/prueba'
+   title:'Poquemones',
+   url:'#pokemones'
 },   
 ]

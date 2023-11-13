@@ -1,13 +1,10 @@
 ---
 import PostVista from "../components/PostVista.astro";
 import Layout from "../layouts/Layout.astro";
-const posts = await Astro.glob('./posts/*.md')
-console.log(posts);
-
+const posts = await Astro.glob('../pages/posts/*.md')
 ---
 
-<Layout title="Blog">
-    <section>
+    <section id="markdawon">
          <article>
             {
                 posts.map((post)=>(
@@ -16,7 +13,6 @@ console.log(posts);
             }
          </article>
     </section>
-</Layout>
 
 <style>
     section{

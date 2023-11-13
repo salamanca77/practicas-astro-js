@@ -1,0 +1,19 @@
+---
+import Layout from "./Layout.astro"
+const {frontmatter} = Astro.props;
+console.log(frontmatter);
+
+---
+
+<Layout title="Layout blog">
+    <section>
+        <h1>{frontmatter.titulo}</h1>
+        <slot />    
+    </section>
+</Layout>
+
+<style>
+    section{
+        margin-top:50px ;
+    }
+</style>

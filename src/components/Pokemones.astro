@@ -4,16 +4,13 @@ import {resultPoke} from "../servicios/apiPokemon"
 const pokes = await resultPoke();
 import Poke from "../components/Poke.astro";
 ---
-
-<Layout title="Prueba">
-    <section>
+    <section id="pokemones">
         {
             pokes.map((poke) => (
                 <Poke  id={poke.id} image={poke.image} />         
             ))
         }
     </section>
-</Layout>
 
 <style>
     section {
