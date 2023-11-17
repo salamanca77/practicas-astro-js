@@ -4,17 +4,26 @@ import {resultPoke} from "../servicios/apiPokemon"
 const pokes = await resultPoke();
 import Poke from "../components/Poke.astro";
 ---
-    <section id="pokemones">
+<section id="pokemones">
+        <h1>Pokemones</h1>
+        <figure>
         {
             pokes.map((poke) => (
-                <Poke  id={poke.id} image={poke.image} />         
+                <Poke  id={poke.id} image={poke.image} />   
             ))
         }
+
+        </figure>
     </section>
 
 <style>
-    section {
-        padding: 50px;
+
+    h1{
+        text-align: center;
+    }
+    figure{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 </style>
 

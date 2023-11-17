@@ -1,17 +1,17 @@
  ---
 const {posts} = Astro.props
-console.log(posts);
 
 ---
-
     <a href={posts.url} target="_blank">
-        <img src={posts.frontmatter.image.url} alt="">
-        <div class="title">
-            {posts.frontmatter.title}
-        </div>
-        <div class="description">
-            {posts.frontmatter.description}
-        </div>
+        <figure>
+            <img src={posts.frontmatter.image.url} alt="">
+            <figcaption>
+                {posts.frontmatter.title}
+            </figcaption>
+            <figcaption>
+                {posts.frontmatter.description}
+            </figcaption>
+        </figure>
     </a>
 
 <style>
@@ -20,11 +20,11 @@ console.log(posts);
         display: block;
         padding: 10px;
     }
-    a img{
-        width: 100%;
+    a figure img{
+        width: 400px;
     }
 
-    a .title{
-        font-size: 32px;
+    a figure figcaption{
+        color: white;
     }
 </style>

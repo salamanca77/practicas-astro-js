@@ -1,22 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro'
 import Home from '../components/Home.astro';
 import Movies from '../components/Movies.astro';
 import Markdawon from '../components/Markdawon.astro';
 import Dibujos from '../components/Dibujos.astro';
-import PreguntaRespuesta from '../components/PreguntaRespuesta.astro';
-import Nosotros from '../components/Nosotros.astro';
+import Api from '../components/Api.astro';
+import Cartelera from '../components/Cartelera.astro';
 import Pokemones from '../components/Pokemones.astro';
 ---
 
 <Layout title="Pagina de prueba con Astro">
+	<Header />
 	<Home />
 	<Movies />
 	<Markdawon />
 	<Dibujos />
-	<PreguntaRespuesta />
-	<Nosotros />
+	<Api />
+	<Cartelera />
 	<Pokemones />
 </Layout>
+
+<style is:global>
+	section[id]{
+		scroll-margin-top: 50px;
+	}
+</style>
 

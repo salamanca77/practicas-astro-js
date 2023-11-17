@@ -1,0 +1,58 @@
+---
+const respuesta = await fetch("https://api.themoviedb.org/3/discover/movie", {
+    headers: {
+        Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiYWVlMGY1OTgxYmYzNGE0MDMzNTFmYzQ4MjUzNDVlOSIsInN1YiI6IjY0ODVkYmUzOTkyNTljMDBlMmY1NzJjYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2zu26OYNbQpBzwy3Xqpr5dm2qgz7f1hlTZU_BGbs264",
+        "Contennt-type": "application/json",
+    },
+});
+
+const data = await respuesta.json();
+const items = data.results;
+---
+
+<section id="cartelera">
+    <h1>Cartelera</h1>
+    <div>
+        {
+            items.map((item) => (
+                <figure>
+                    <img  src={"https://image.tmdb.org/t/p/w200" + item.poster_path}  alt=""/>
+                    <figcaption>{item.title}</figcaption>
+                </figure>
+            ))
+        }
+    </div>
+</section>
+
+<style>
+
+    h1{
+        text-align: center;
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

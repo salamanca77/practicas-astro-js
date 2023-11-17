@@ -18,15 +18,15 @@ export const menu_valores:menu_tipo_valores[] = [
     url:'#dibujos'
  },
  {
-   title:'Preguntas',
-   url:'#preguntaRespuesta'
+   title:'Api',
+   url:'#api'
 },   
  {
-   title:'Nosotros',
-   url:'#nosotros'
+   title:'Cartelera',
+   url:'#cartelera'
 },  
  {
-   title:'Poquemones',
+   title:'Pokemones',
    url:'#pokemones'
 },   
 ]

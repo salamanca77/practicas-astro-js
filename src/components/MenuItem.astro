@@ -3,9 +3,12 @@ import type {menu_tipo_valores} from '../tiposDatos/menu_tipo_valores'
 interface Props extends menu_tipo_valores{} 
 const {title, url} = Astro.props
 ---
-<li>
-    <a href={url}>{title}</a>
-</li>
+
+    <li>
+        <a href={url}>{title}</a>
+    </li>
+
+
 <style>
     li a{
         cursor: pointer;
@@ -16,4 +19,18 @@ const {title, url} = Astro.props
         text-align: center;
         padding: 30px 30px;
     }
+
+    
 </style>
+
+
+
+
+
+
+
+
+
+
+
+

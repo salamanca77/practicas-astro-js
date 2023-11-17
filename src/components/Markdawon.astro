@@ -3,8 +3,8 @@ import PostVista from "../components/PostVista.astro";
 import Layout from "../layouts/Layout.astro";
 const posts = await Astro.glob('../pages/posts/*.md')
 ---
-
-    <section id="markdawon">
+<section id="markdawon">
+        <h1>markdawon</h1>
          <article>
             {
                 posts.map((post)=>(
@@ -15,14 +15,36 @@ const posts = await Astro.glob('../pages/posts/*.md')
     </section>
 
 <style>
+    
     section{
-        padding-top:50px ;
         width: 100%;
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
-
-    article{
+    
+    section article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         width: 400px;
     }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

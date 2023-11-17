@@ -11,7 +11,7 @@ export type APIResult = {
     episode:  string[];
     url:      string;
     created:  Date;
-    results: string[]
+    results: string[];
 }
 
 export enum Gender {

@@ -1,0 +1,67 @@
+<section id="api">
+    <h1>Pokemones Api</h1>
+    <div class="container">
+        <nav id="idNav"></nav>
+    </div>
+
+    <div id="lista" class="classLista"></div>
+
+    <template class="classTemplate">
+        <div>
+            <img id="imgDos" class="classImg" alt="" />
+            <figcaption class="classfigcaption"></figcaption>
+        </div>
+    </template>
+</section>
+
+<style>
+    section h1{
+        text-align: center;
+    }
+
+    #lista {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        justify-items:center ;
+        align-items: center;    
+    }
+
+    #lista img{
+        width:96px;
+        height: 96px;
+    }
+</style>
+
+<script>
+    const $div = document.getElementById("lista");
+    const $img = document.querySelector("img");
+    const $template = document.querySelector(".classTemplate").content;
+    const fragment = document.createDocumentFragment();
+
+    const _fetch = async (url) => {
+        const respuesta = await fetch(url);
+        const json = await respuesta.json();
+        const pokemones = json.results;
+        return pokemones;
+    };
+
+    const pokemon = await _fetch("https://pokeapi.co/api/v2/pokemon");
+
+    pokemon.forEach(async (element, index) => {
+        const pokemon = await _fetch(element.url);
+
+        const sub_respuesta = await fetch(element.url);
+        const sub_json = await sub_respuesta.json();
+
+        $template
+            .querySelector("img")
+            .setAttribute("src", sub_json.sprites.front_default);
+
+        $template.querySelector("figcaption").textContent =
+            element.name + " " + index;
+        const clone = $template.cloneNode(true);
+        fragment.appendChild(clone);
+
+        $div.appendChild(fragment);
+    });
+</script>

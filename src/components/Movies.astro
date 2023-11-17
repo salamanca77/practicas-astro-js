@@ -5,11 +5,10 @@ import { apiconeccion } from "../servicios/apiconeccion";
 import Layout from "../layouts/Layout.astro";
 import Personajes from "../components/Personajes.astro";
 const datos = await apiconeccion() as APIResult;
-console.log(datos);
 
 ---
-
-    <section id="movies">
+<section id="movies">
+        <h1>Movies</h1>
         <article>
                 {
                     datos.map(({ name, image, id }) => (
@@ -21,10 +20,15 @@ console.log(datos);
     </section>
 
 <style>
+    h1{
+        text-align: center;
+    }
     section {
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     article {
