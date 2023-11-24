@@ -1,0 +1,18 @@
+---
+interface Props {
+  elementos: [];
+  id: string;
+}
+
+const { elementos } = Astro.props;
+console.log(elementos);
+---
+
+{
+  elementos.map((elemento) => (
+    <a href={`/dibujos/${elemento.id}`}>
+      <img src={elemento.image} alt="" width="200px" />
+      <p>{elemento.name}</p>
+    </a>
+  ))
+}

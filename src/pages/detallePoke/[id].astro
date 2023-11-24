@@ -1,0 +1,10 @@
+---
+console.log(Astro.params);
+export const prerender = false
+const {id} = Astro.params
+---
+
+<section>
+    <h1>Pokemones</h1>
+    <p>{id}</p>
+</section>

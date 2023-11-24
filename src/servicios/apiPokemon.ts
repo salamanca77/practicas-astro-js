@@ -1,7 +1,9 @@
 import { type APIPoke } from "../tiposDatos/api";
 
+const url = "https://pokeapi.co/api/v2/pokemon"
+
 export const resultPoke = async () => {
-    const resultado = await fetch("https://pokeapi.co/api/v2/pokemon");
+    const resultado = await fetch(url);
     const resulJson = (await resultado.json()) as APIPoke;
     const { results } = resulJson;
     

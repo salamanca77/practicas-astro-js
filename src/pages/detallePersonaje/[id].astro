@@ -2,15 +2,14 @@
 import { idconeccion } from "../../servicios/apiconeccion";
 import { apiconeccion } from "../../servicios/apiconeccion";
 import Layout from "../../layouts/Layout.astro";
-
+export const prerender = false
 const { id } = Astro.params;
-console.log({ id });
+
 let item;
 
 if (id) {
     item = await idconeccion({ id });
 }
-console.log(item);
 
 // export async function getStaticPaths() {
 //     const itemes = await apiconeccion();

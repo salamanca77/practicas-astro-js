@@ -1,0 +1,16 @@
+---
+const {id} = Astro.params
+
+export const getStaticPaths = ( async () => {
+    
+    const respuesta = await fetch("https://rickandmortyapi.com/api/character")
+    const {results} =  await respuesta.json()
+    return results.map((elemento)=>(
+        {params: {id:elemento.id} }
+    ))
+}) 
+---
+<section>
+    <h1>Detalles</h1>
+    <p>{id}</p>    
+</section>

@@ -1,19 +1,17 @@
 ---
-const {id, image} = Astro.props;
+const { id, image } = Astro.props;
 ---
 
 <div>
-    <a href={`/detallePoke/${id}`}>
-        <p>{id}</p>
-        <img src={image} alt="" />
-    </a>
+  <a href={`/detallePoke/${id}`}>
+    <p>{id}</p>
+    <img src={image} alt="" />
+  </a>
 </div>
 
 <style>
-    div a img{
-        width: 200px;
-        height: 250px;
-    }
-
+  div a img {
+    width: 200px;
+    height: 250px;
+  }
 </style>
-

@@ -1,0 +1,35 @@
+---
+const url = 'http://google.com'
+const se_puede = 'asies'
+---
+<nav>
+    <a id="anterior" class="anterior" href="anterior">Anterio</a>
+    <a id="siguiente" class="seguiente" href="siguiente">Siguiente</a>
+</nav>  
+
+<style>
+    nav a{
+        color:white;
+        padding-right: 10px;
+    }
+    nav{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+</style>
+
+<script>
+    document.addEventListener('click', (elemento) =>{
+        if((elemento.target as HTMLTextAreaElement).matches('a[href="siguiente"]')){
+            elemento.preventDefault()
+            console.log("siguiente");
+        }
+            
+        if((elemento.target as HTMLTextAreaElement).matches('a[href="anterior"]')){
+            elemento.preventDefault()
+            console.log("antearior");
+        }  
+
+    })
+</script>
