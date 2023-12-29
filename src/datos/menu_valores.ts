@@ -6,23 +6,23 @@ export const menu_valores:menu_tipo_valores[] = [
     url:'/'
  },
  {
-    title:'FAQ',
-    url:'/fag'
+    title:'Enlace uno',
+    url:'/enlace_uno'
  },
  {
-    title:'Blog',
-    url:'/blog'
+    title:'Enlace dos',
+    url:'/enlace_dos'
  },
  {
-    title:'Prueba',
-    url:'/pruebas'
+    title:'Enlace tres',
+    url:'/enlace_tres'
  },
  {
-   title:'Preguntas',
-   url:'/preguntaRespuesta'
+   title:'Enlace cuatro',
+   url:'/enlace_cuatro'
 },   
  {
-   title:'blog5',
-   url:'/nosotros'
+   title:'Enlace cinco',
+   url:'/enlace_cinco'
 },   
 ]

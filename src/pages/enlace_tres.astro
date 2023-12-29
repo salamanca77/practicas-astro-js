@@ -1,0 +1,193 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Buscador from "../components/Buscador.astro";
+
+---
+<Layout title="Nosotros">
+    <section>
+        <Buscador />
+        <div class="container">
+            <figure>
+                <a href="detalle/1">
+                    <img src="/imagenes/aerocamara-sistema-bivalvular.jpg" alt="andador-de-aluminio-con-ruedas-delanteras">
+                    <figcaption>aerocamara-sistema-bivalvular</figcaption>
+                    <span>Bs 150</span>
+                </a>
+            </figure>
+            <figure>
+                <a href="detalle/2">
+                    <img src="/imagenes/andador-de-aluminio-con-ruedas-delanteras.jpg" alt="andador-de-aluminio-con-ruedas-delanteras">
+                    <figcaption>andador-de-aluminio-con-ruedas-delanteras</figcaption>
+                    <span>Bs 150</span>
+                </a>
+            </figure>
+            <figure>
+                <a href="">
+                    <img src="/imagenes/aspirador.jpg" alt="aspirador">
+                    <figcaption>aspirador</figcaption>
+                    <span>Bs 150</span>
+                </a>
+            </figure>
+            <figure>
+                <img src="/imagenes/bano-portatil-de-acero-pintado.jpg" alt="bano-portatil-de-acero-pintado">
+                <figcaption>bano-portatil-de-acero-pintado</figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/bolsa-colectora-de-orina-adulto-de-2-lt.jpg" alt="bolsa-colectora-de-orina-adulto-de-2-lt">
+                <figcaption>bolsa-colectora-de-orina-adulto-de-2-lt</figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/bolsa-para-urostomia-con-valvula.jpg" alt="bolsa-para-urostomia-con-valvula">
+                <figcaption></figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/cojin-almohada-cervical-con-gel.jpg" alt="cojin-almohada-cervical-con-gel">
+                <figcaption>cojin-almohada-cervical-con-gel</figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/electroestimulador.jpg" alt="electroestimulador">
+                <figcaption>electroestimulador</figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/esfera-de-colores-para-estimulacion.jpg" alt="esfera-de-colores-para-estimulacion">
+                <figcaption>esfera-de-colores-para-estimulacion</figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/gel-de-relajamiento-y-alineamiento-para-dedos.jpg" alt="gel-de-relajamiento-y-alineamiento-para-dedos">
+                <figcaption>gel-de-relajamiento-y-alineamiento-para-dedos</figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/generador-ligasure-para-sellado-de-vasos.jpg" alt="generador-ligasure-para-sellado-de-vasos">
+                <figcaption>generador-ligasure-para-sellado-de-vasos</figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/guantes-dnitrilo-color-negro-x100-un.jpg" alt="guantes-dnitrilo-color-negro-x100-un">
+                <figcaption>guantes-dnitrilo-color-negro-x100-un</figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/inmuno-complex.jpg" alt="inmuno-complex">
+                <figcaption>inmuno-complex</figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/silla-de-ruedas.jpg" alt="silla-de-ruedas">
+                <figcaption>silla-de-ruedas</figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/talonera-con-punto-azul-con-gel-adhesivo.jpg" alt="talonera-con-punto-azul-con-gel-adhesivo">
+                <figcaption>talonera-con-punto-azul-con-gel-adhesivo</figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/termometro-infrarrojo-de-frente-jumper.jpg" alt="termometro-infrarrojo-de-frente-jumper">
+                <figcaption>termometro-infrarrojo-de-frente-jumper</figcaption>
+                <span>Bs 150</span>
+            </figure>
+            <figure>
+                <img src="/imagenes/tubo-d-oxigeno.jpg" alt="tubo-d-oxigeno">
+                <figcaption>tubo-d-oxigeno</figcaption>
+                <span>Bs 150</span>
+            </figure>
+        </div>
+    </section>
+</Layout>
+<style>
+    section{
+        padding: 70px 0;
+    }
+
+
+    .container figure img{
+        width: 100%;;
+    }
+    .container{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+    
+    .ocultar{
+        display: none;
+    }
+    
+    figure{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center ;
+        /* color:rgba(0, 0, 0, 0); */
+        box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.3) ;
+        border-radius: 5%;
+        overflow: hidden;
+        padding: 20px 10px;
+        
+    }
+    
+    @media (max-width:900px){
+        .container{
+            grid-template-columns: repeat(2, minmax(200px, 1fr));
+        }
+    }
+
+    @media (max-width:700px){
+        .container{
+            width: 100%;
+            grid-template-columns: repeat(1, minmax(200px, 1fr));
+        }
+    }
+</style>
+
+<script>
+    const $figures = document.querySelectorAll('figure')
+    
+    const $input = document.querySelector('input')
+    
+    $input.addEventListener('keyup', (e)=>{
+        e.preventDefault()
+        console.log('apretar');
+            $figures.forEach(($figure) =>{
+                $figure.children[1].textContent.includes(e.target.value)
+                ? $figure.classList.remove('ocultar')
+                : $figure.classList.add('ocultar')
+            })
+    })
+
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

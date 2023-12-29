@@ -1,6 +1,6 @@
 import * as adapter from '@astrojs/netlify/netlify-functions.js';
 import { renderers } from './renderers.mjs';
-import { manifest } from './manifest_883045f7.mjs';
+import { manifest } from './manifest_29d4c5de.mjs';
 import 'cookie';
 import 'kleur/colors';
 import 'string-width';
@@ -14,7 +14,7 @@ import 'path-to-regexp';
 const _page0  = () => import('./chunks/generic_6ac9a06d.mjs');
 const _page1  = () => import('./chunks/index_df879029.mjs');
 const _page2  = () => import('./chunks/preguntaRespuesta_d121706f.mjs');
-const _page3  = () => import('./chunks/nosotros_f681af95.mjs');
+const _page3  = () => import('./chunks/nosotros_d3ce9510.mjs');
 const _page4  = () => import('./chunks/pruebas_89949ba5.mjs');
 const _page5  = () => import('./chunks/_id__b693a092.mjs');
 const _page6  = () => import('./chunks/01-posts_8621e9be.mjs');
