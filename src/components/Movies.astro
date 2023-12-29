@@ -3,6 +3,8 @@ import { type APIResult } from "../tiposDatos/api";
 import { apiconeccion } from "../servicios/apiconeccion";
 import Personajes from "../components/Personajes.astro";
 const datos = (await apiconeccion()) as APIResult;
+
+console.log(datos);
 ---
 
 <section id="movies">

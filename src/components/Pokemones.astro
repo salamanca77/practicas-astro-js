@@ -7,29 +7,29 @@ console.log(pokes);
 ---
 
 <section id="pokemones">
-    <h1>Pokemones</h1>
+  <h1>Pokemones</h1>
 
-    <Controles />    
+  <Controles />
 
-    <figure>
-        {pokes.map((poke) => <Poke id={poke.id} image={poke.image} />)}
-    </figure>
+  <figure>
+    {pokes.map((poke) => <Poke id={poke.id} image={poke.image} />)}
+  </figure>
 </section>
 
 <style>
-    h1 {
-        text-align: center;
-    }
-    figure {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+  h1 {
+    text-align: center;
+  }
+  figure {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 </style>
 
 <script>
-    import { resultPoke } from "../servicios/apiPokemon";
-    const pokes = await resultPoke();
-    const titulo = document.querySelector("h1");
-    console.log(titulo);
-    console.log(pokes);
+  import { resultPoke } from "../servicios/apiPokemon";
+  const pokes = await resultPoke();
+  const titulo = document.querySelector("h1");
+  console.log(titulo);
+  console.log(pokes);
 </script>

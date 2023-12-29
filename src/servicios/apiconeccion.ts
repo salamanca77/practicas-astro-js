@@ -9,7 +9,7 @@ export const idconeccion  = async ({id}: {id:string})=>{
 export  const apiconeccion = async ()=>{
     const resultado = await fetch('https://rickandmortyapi.com/api/character')
     const {results} = (await resultado.json())
-    // console.log(results);
+    console.log(results);
     return results
 }
   
